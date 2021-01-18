@@ -1,5 +1,7 @@
 # mini-orm-framework
-a lightweight ORM framework for PHP with MySQL
+a lightweight ORM framework for PHP with MySQL, my intent behind it is getting accustomed to PHP and OOP.
+This is one of my first project as a web developper. 
+I thought of it while working on a real project during my traineeship (which is still ongoing). 
 
 Use a simple and vague DAO capable of handling basic CRUD operation.
 you need to create classes reflecting your SQL tables with personalized methods that use the DAO ones as a base.
