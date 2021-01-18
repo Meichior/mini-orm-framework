@@ -50,7 +50,7 @@
             
             if(gettype($cont) == "string") 
                 $formated_values .= "\"$cont\"";
-            elseif(gettype($cont) == "integer")
+            elseif(gettype($cont) == "integer" || gettype($cont) == "double")
                 $formated_values .= "$cont";
 
 
