@@ -32,6 +32,7 @@
 
             if($x < count($input)-1)
                 $formated_keys .= ", ";
+            
             $x++;
         }
         
