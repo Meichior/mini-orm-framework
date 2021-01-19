@@ -23,7 +23,7 @@ Use function.php to validate, sanitize and securise inputs as well as outputs
     requests <strong>↓</strong>
   </li> 
     <li>
-    Make this an simple MVC framework
+    Make this a simple MVC framework
   </li> 
 </ul>
 
