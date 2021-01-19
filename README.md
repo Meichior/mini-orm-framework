@@ -22,6 +22,9 @@ Use function.php to validate, sanitize and securise inputs as well as outputs
     While the system itself resists SQL injections, users named  " 'or TRUE; DROP DATABASE test;-- " shouldn't be able to register. -> add a way to completely filter that type of 
     requests <strong>↓</strong>
   </li> 
+    <li>
+    Make this an simple MVC framework
+  </li> 
 </ul>
 
 ![alt text](https://files.catbox.moe/9ssz86.png)
