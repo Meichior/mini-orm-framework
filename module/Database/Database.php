@@ -4,9 +4,6 @@
  * simplicity and generality. 
  * Classes modeled after your DB tables expand on these method to realize operations that are relevant to them.
  * (User having a logIn() method which make use of the Database search_table() method for exemple)
- * /!\
- * Security checks to prevent SQL injections should be handled by a layer closer to your application
- * /!\
  ****************************************************************************************************************/
 
     class Database {
