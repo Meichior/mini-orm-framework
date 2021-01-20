@@ -11,12 +11,68 @@
         class User extends Database{
                 
             private const TABLENAME = "Users";  
-            private  $id      = NULL;
-            public $surname   = "";
-            public $name      = "";
-            public $email     = "";
-            public $hash      = "";
+            private  $id       = NULL;
+            private $surname   = "";
+            private $name      = "";
+            private $email     = "";
+            private $hash      = "";
 
+            //getter
+            public function id() {
+
+                return $this->id;
+            }
+
+            public function surname() {
+
+                return $this->surname;
+            }
+
+            public function name() {
+
+                return $this->name;
+            }
+
+            public function email() {
+
+                return $this->email;
+            }
+
+            public function hash() {
+
+                return $this->hash;
+            }
+
+
+            //Setter
+            public function set_id(int $input) {
+
+                $this->id = $input;
+            }
+
+            public function set_surname(string $input) {
+
+                $this->surname = $input;
+            }
+
+            public function set_name(string $input) {
+
+                $this->name = $input;
+            }
+
+            public function set_email(string $input) {
+
+                $this->email = $input;
+            }
+
+            public function set_hash(string $input) {
+
+                $this->hash = $input;
+            }
+
+           
+            
+            
             //Quite bad, it's basically a hack as of now.
             function populate(array $input): void {
 
