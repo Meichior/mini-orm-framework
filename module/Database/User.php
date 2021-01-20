@@ -78,7 +78,7 @@
 
                 foreach ($this as $column => $value) {
                     
-                        $this-> $column = $input[$column];
+                        $this-> $column = $input[0][$column];
                 }
             }
 
