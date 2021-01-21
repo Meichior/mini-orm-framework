@@ -11,12 +11,23 @@
         class User extends Database{
                 
             private const TABLENAME = "Users";  
-            private  $id       = NULL;
-            private $surname   = "";
-            private $name      = "";
-            private $email     = "";
-            private $hash      = "";
+            private $id;
+            private $surname;
+            private $name;      
+            private $email;
+            private $hash;
 
+            
+            
+            function __construct() {
+                
+                $id      =  0;
+                $surname =  "";
+                $name    =  "";
+                $email   =  "";
+                $hash    =  "";
+            }
+            
             //getter
             public function id() {
 
@@ -116,7 +127,7 @@
                     
                     if($user[$column] != $value) {
                         
-                        $success = $this->update_row(self::TABLENAME, $column, $value, $field);
+                        $success = $this->update_row(self::TABLENAME, $column, $value, $column, $field);
                     
                         return $success;       
                     }
