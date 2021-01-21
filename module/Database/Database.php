@@ -62,13 +62,12 @@
             return true;
         }
 
-        static function update_row(string $table, string $column, string $value, $whereChange): bool  {
+        static function update_row(string $table, string $column, $value, string $where, $whereVal): bool  {
 
             $db  = self::connect_db();
-            $req = $db->prepare("UPDATE `$table` set `$column` = \"$value\" WHERE `$table`.`$column` = \"$whereChange\";");
-
+            $req = $db->prepare("UPDATE `$table` set `$column` = \"$value\" WHERE `$table`.`$where` = \"$whereVal\";");
             $req->execute();
-            var_dump($req);
+           
             if($req->rowCount() === 0) {
 
                 return false;
