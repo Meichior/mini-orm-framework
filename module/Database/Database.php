@@ -34,9 +34,7 @@
             $req = $db->prepare("SELECT * FROM `$table` WHERE `$column` = $value");
             
             $req->execute();
-
-         
-            
+        
             return $req->fetchAll(PDO::FETCH_ASSOC);
         }
 
@@ -48,6 +46,7 @@
 
             $db  = self::connect_db();
             $req = $db->prepare("INSERT INTO `$table` ($column) VALUES ($value);");
+            
             $req->execute();
 
             if($req->rowCount() === 0) {
@@ -65,7 +64,7 @@
             $req = $db->prepare("UPDATE `$table` set `$column` = \"$value\" WHERE `$table`.`$where` = \"$whereVal\";");
 
             $req->execute();
-            var_dump($req);
+           
             if($req->rowCount() === 0) {
 
                 return false;
