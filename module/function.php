@@ -8,10 +8,12 @@
         return preg_replace("[ ]", "", $string);;
     }
 
+
     function sanitize($input) {
 
         return htmlentities(trim($input));
     }
+
 
     function strip_unset(array $input): array {
 
@@ -25,6 +27,7 @@
 
         return $input;
     }
+
 
     //not quite satisfied with this solution but it's the only one I could come up with at the time.
     //Web developpement is still new to me...
@@ -43,8 +46,7 @@
             $x++;
         }
         
-        return $formated_keys;
-   
+         return $formated_keys;
     }
 
     
@@ -70,6 +72,7 @@
         
         return $formated_values;
     }
+
 
     //nested loops are O(n^2), I should find another alternative if possible. (one that is better than formating the columns and value separately that is...)
     //For now I'll keep using format_col_pdo and format_value_pdo even if I'm not quite satisfied with them.
