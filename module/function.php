@@ -4,27 +4,21 @@
 
     
     function del_spaces(string $string): string {
-
         return preg_replace("[ ]", "", $string);;
     }
 
 
     function sanitize($input) {
-
         return htmlentities(trim($input));
     }
 
 
     function strip_unset(array $input): array {
-
-        foreach($input as $col => $value) {
-
-            if(isset($value))
+        foreach ($input as $col => $value) {
+            if (isset($value))
                 continue;
-            
             unset($input[$col]);
         }
-
         return $input;
     }
 
@@ -37,11 +31,10 @@
         $formated_keys = "";
         $x             = 0;
 
-        foreach($input as $col) {
-    
+        foreach ($input as $col) {
             $formated_keys  .= "`$col`";
 
-            if($x < count($input)-1)
+            if ($x < count($input)-1)
                 $formated_keys .= ", ";
             $x++;
         }
@@ -56,15 +49,13 @@
         $formated_values = "";
         $x               = 0;
         
-        foreach($values as $cont) {
-            
-            if(gettype($cont) == "string") 
+        foreach ($values as $cont) {
+            if (gettype($cont) == "string") 
                 $formated_values .= "\"$cont\"";
-            elseif(gettype($cont) == "integer" || gettype($cont) == "double")
+            elseif (gettype($cont) == "integer" || gettype($cont) == "double")
                 $formated_values .= "$cont";
 
-
-            if($x < count($values)-1)
+            if ($x < count($values)-1)
                 $formated_values .= ", ";
             
             $x++;
